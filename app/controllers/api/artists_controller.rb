@@ -11,6 +11,7 @@ class Api::ArtistsController < ApplicationController
 
     def create
         @artist = Artist.create!(artist_params)
+        render json: @artist
     end
     def update
         @artist = Artist.find(params[:id])
